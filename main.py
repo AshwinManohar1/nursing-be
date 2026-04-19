@@ -4,7 +4,6 @@ from slowapi import _rate_limit_exceeded_handler
 from slowapi.errors import RateLimitExceeded
 from slowapi.middleware import SlowAPIMiddleware
 
-from api.config import PORT
 from api.db import db_manager
 from api.middleware.error_handler import add_exception_handlers
 from api.utils.rate_limit import limiter
@@ -57,4 +56,5 @@ async def health_check():
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=PORT)
+    port = int(__import__("os").getenv("PORT", "8000"))
+    uvicorn.run(app, host="0.0.0.0", port=port)
