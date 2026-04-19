@@ -29,7 +29,7 @@ class DatabaseManager:
         self.client: Optional[AsyncIOMotorClient] = None
         self.db: Optional[AsyncIOMotorDatabase] = None
         self.mongodb_url = MONGO_URI
-        self.database_name = "schedule_manager"
+        self.database_name = "shiftwise"
     
     async def connect(self):
         """Connect to MongoDB and initialize Beanie"""
