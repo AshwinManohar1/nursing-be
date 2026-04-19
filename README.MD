@@ -35,7 +35,7 @@ cp .env.example .env
 ### Run
 
 ```bash
-uv run fastapi dev
+uv run uvicorn main:app --reload
 ```
 
 ## Environment Variables

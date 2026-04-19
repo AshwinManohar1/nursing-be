@@ -1,0 +1,12 @@
+[project]
+name = "shiftwise-be"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.136.0",
+    "motor>=3.7.1",
+    "pydantic-settings>=2.13.1",
+    "python-dotenv>=1.2.2",
+    "uvicorn[standard]>=0.44.0",
+]
